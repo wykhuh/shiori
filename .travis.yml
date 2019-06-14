@@ -13,7 +13,7 @@ before_install:
   - sudo apt install gcc-mingw-w64
 
 install:
-  - go get github.com/RadhiFadlillah/shiori
+  - go get github.com/wykhuh/shiori
 
 script:
   - go generate
@@ -21,7 +21,7 @@ script:
   - go vet $(go list ./... | grep -v /vendor/)
   - go test -v -race ./...
   # only build binaries from the latest Go release.
-  - if [ "${LATEST}" = "true" ]; then 
+  - if [ "${LATEST}" = "true" ]; then
       env CGO_ENABLED=1 GOARCH=386 go build -v -o shiori_linux_386;
       env CGO_ENABLED=1 GOARCH=amd64 go build -v -o shiori_linux_amd64;
       env CGO_ENABLED=1 GOOS=windows GOARCH=386 CC=i686-w64-mingw32-gcc go build -v -o shiori_windows_386.exe;
