@@ -25,6 +25,11 @@
 <body>
     <div id="cache-page" class="page" :class="{night: nightMode}">
         <div id="sidebar">
+            <yla-tooltip placement="right" content="Home">
+                <a href="/">
+                    <i class="fas fa-home"></i>
+                </a>
+            </yla-tooltip>
             <yla-tooltip placement="right" content="Toggle night mode">
                 <a @click="toggleNightMode">
                     <i class="fas fa-fw" :class="nightMode ? 'fa-sun' : 'fa-moon'"></i>
