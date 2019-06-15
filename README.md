@@ -2,9 +2,22 @@
 
 This is a fork of [Shiori](https://github.com/RadhiFadlillah/shiori)
 
-## Changes
-- fix style bug on Safari
-- add link to home on cache view
+## Install
+
+```bash
+# install dependenicies
+go get github.com/shurcooL/vfsgen
+
+```
+## Run
+
+``` bash
+# recomple assets
+go generate
+
+# create binary
+go build
+```
 
 ## License
 
